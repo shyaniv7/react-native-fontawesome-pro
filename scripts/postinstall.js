@@ -4,7 +4,6 @@ var shell = require('shelljs');
 var schema = {
     properties: {
       token: {
-        //pattern: /^[a-zA-Z\s\-]+$/,
         message: "Please enter your FontAwesome Pro token",
         required: true,
       }
@@ -26,7 +25,6 @@ prompt.get(schema, function (err, result) {
   console.log('  token: ' + result.token);
 
 
-  //shell.exec('npm config set @fortawesome:registry=https://npm.fontawesome.com/' + result.token);
   shell.echo("@fortawesome:registry=https://npm.fontawesome.com/" + result.token).toEnd(".npmrc");
   shell.exec("yarn add @fortawesome/fontawesome-pro-light @fortawesome/fontawesome-pro-regular @fortawesome/fontawesome-pro-solid --ignore-scripts");
 });
