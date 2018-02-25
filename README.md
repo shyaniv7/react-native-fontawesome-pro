@@ -31,8 +31,11 @@ In your main app.js file
 ```
 import { configureFontAwesomePro } from "react-native-fontawesome-pro";
 
+/* NOTE: Optional you can pass a prefixType into configureFontAwesomePro to change the default from "regular" to "solid" or "light" */
 
 configureFontAwesomePro();
+// configureFontAwesomePro("solid");
+// configureFontAwesomePro("light");
 ```
 
 In your components
