@@ -11,6 +11,15 @@ or
 `yarn add react-native-fontawesome-pro`
 
 
+During the installation you will be asked to enter your FontAwesome Pro `TOKEN`
+Once the token is entered press enter. This will create a `.npmrc` file for you configured to pull
+from the fontawesome private repository using your token.
+
+The postinstall script will then automatically install the pro packages for you.
+
+* You MUST go through the linking process
+
+
 # Linking
 
 `react-native link react-native-fontawesome-pro`
