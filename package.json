@@ -1,10 +1,30 @@
 {
   "name": "react-native-fontawesome-pro",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "postinstall": "node ./scripts/postinstall.js"
+  },
+  "license": "MIT",
+  "author": "Yaniv Shnaider",
+  "bugs": {
+    "url": "https://github.com/shyaniv7/react-native-fontawesome-pro/issues"
+  },
+  "keywords": [
+    "awesome",
+    "component",
+    "font",
+    "font-awesome",
+    "fontawesome",
+    "icon",
+    "react-native",
+    "fontawesome-pro",
+    "pro"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shyaniv7/react-native-fontawesome-pro.git"
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.3",
