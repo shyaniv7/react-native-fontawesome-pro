@@ -1,6 +1,31 @@
 # react-native-fontawesome-pro
 Easily use your FontAwesome Pro icons in React-Native
 
+# Requirements
+
+* Create a `.npmrc` file in the root of your project and the line below.
+Replace `TOKEN` with your FontAwesome Pro token
+
+```
+@fortawesome:registry=https://npm.fontawesome.com/<TOKEN>
+```
+This will allow you to download the pro solid, regular and light font packages from the fontawesome pro repo.
+
+* Install `react-native-svg`
+
+```
+npm install --save react-native-svg
+
+or
+
+yarn add react-native-svg
+```
+
+* Link `react-native-svg`
+
+```
+react-native link react-native-svg
+```
 
 # Installation
 
@@ -10,29 +35,7 @@ or
 
 `yarn add react-native-fontawesome-pro`
 
-
-During the installation you will be asked to enter your FontAwesome Pro `TOKEN`
-Once the token is entered press enter. This will create a `.npmrc` file for you configured to pull
-from the fontawesome private repository using your token.
-
 The postinstall script will then automatically install the pro packages for you.
-
-* You MUST go through the linking process
-
-
-# Linking
-
-`react-native link react-native-fontawesome-pro`
-
-1 more thing you have to do in order for `react-native-svg` to work
-
-go into your `.xcodeproj` and navigate into
-
-Libraries => RNFontAwesomePro.xcodeproj => RNFontAwesomePro => Libraries => RNSVG.xcodeproj => Products
-
-find `libRSVG.a` and drag it into your projects build phases => Link Binary With Libraries
-
-
 
 # Usage
 
@@ -75,6 +78,8 @@ If a valid name is not provided `question-circle` will show up instead.
 | color      | hexdecimal or string | "black"             |
 | size      | number      |   20                        |
 | type | prefixType as a string see definition above      |    "regular" |
+| iconStyle | style object      |    {} |
+| containerStyle | style object      |    {} |
 
 
 
