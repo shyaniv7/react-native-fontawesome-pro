@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { View } from "react-native"
+import { View, TouchableOpacity } from "react-native"
 import { Svg, Path } from "react-native-svg";
 import fontawesome from "@fortawesome/fontawesome";
 import { prefixTypes } from "./config";
 
 const DEFAULT_ICON = "question-circle";
 
-const Icon = ( { name, size, color, type, containerStyle, iconStyle } ) => {
+const Icon = ( { name, size, color, type, containerStyle, iconStyle, onPress } ) => {
 
   const prefix = prefixTypes[type];
   let icon = fontawesome.findIconDefinition( { prefix, iconName: name } );
@@ -20,7 +20,7 @@ const Icon = ( { name, size, color, type, containerStyle, iconStyle } ) => {
   const path = iconData[4];
   const viewBox = [ 0, 0, iconData[0], iconData[1] ].join( " " );
 
-  return (
+  const iconContent (
     <View style={containerStyle}>
       <Svg
         height={size}
@@ -37,13 +37,24 @@ const Icon = ( { name, size, color, type, containerStyle, iconStyle } ) => {
         />
       </Svg>
     </View>
-  )
+  );
+
+  if ( onPress ) {
+    return (
+      <TouchableOpacity onPress={onPress}>
+        {iconContent}
+      </TouchableOpacity>
+    );
+  }
+
+  return iconContent;
 };
 
 Icon.propTypes = {
   name: PropTypes.string,
   size: PropTypes.number,
   color: PropTypes.string,
+  onPress: PropTypes.func,
   type: PropTypes.oneOf( Object.keys( prefixTypes ) ),
   iconStyle: PropTypes.oneOfType( [
     PropTypes.object,
@@ -62,6 +73,7 @@ Icon.defaultProps = {
   type: "regular",
   containerStyle: {},
   iconStyle: {},
+  onPress: null
 };
 
 export default Icon;
