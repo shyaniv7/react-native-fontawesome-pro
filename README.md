@@ -11,6 +11,18 @@ Replace `TOKEN` with your FontAwesome Pro token
 ```
 This will allow you to download the pro solid, regular and light font packages from the fontawesome pro repo.
 
+* Install the FontAwesome Pro packages ( you will not be able to install them without the previous step )
+
+```
+npm install --save @fortawesome/fontawesome-pro-light @fortawesome/fontawesome-pro-regular @fortawesome/fontawesome-pro-solid
+
+or
+
+yarn add @fortawesome/fontawesome-pro-light @fortawesome/fontawesome-pro-regular @fortawesome/fontawesome-pro-solid
+
+```
+
+
 * Install `react-native-svg`
 
 ```
@@ -55,7 +67,7 @@ In your components
 import Icon from "react-native-fontawesome-pro";
 
 <View style={styles.container}>
-  <Icon name="chevron-right" color="red" type="regular" />
+  <Icon name="chevron-right" color="red" type="regular" onPress={() => alert("do something")} />
   <Icon name="chevron-right" color="blue" type="solid" size={24}/>
   <Icon name="chevron-right" color="green" type="light" size={24} />
 </View>
@@ -81,7 +93,6 @@ If a valid name is not provided `question-circle` will show up instead.
 | iconStyle | style object      |    {} |
 | containerStyle | style object      |    {} |
 | onPress | function      |    null |
-
 
 
 
