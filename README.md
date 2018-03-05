@@ -14,11 +14,11 @@ This will allow you to download the pro solid, regular and light font packages f
 * Install the FontAwesome Pro packages ( you will not be able to install them without the previous step )
 
 ```
-npm install --save @fortawesome/fontawesome-pro-light @fortawesome/fontawesome-pro-regular @fortawesome/fontawesome-pro-solid
+npm install --save @fortawesome/fontawesome-free-brands @fortawesome/fontawesome-pro-light @fortawesome/fontawesome-pro-regular @fortawesome/fontawesome-pro-solid
 
 or
 
-yarn add @fortawesome/fontawesome-pro-light @fortawesome/fontawesome-pro-regular @fortawesome/fontawesome-pro-solid
+yarn add @fortawesome/fontawesome-free-brands @fortawesome/fontawesome-pro-light @fortawesome/fontawesome-pro-regular @fortawesome/fontawesome-pro-solid
 
 ```
 
@@ -78,7 +78,8 @@ import Icon from "react-native-fontawesome-pro";
   prefixType = {
     regular: "far",
     solid: "fas",
-    light: "fal"
+    light: "fal",
+    brands: "fab"
   };
 ```
 The icon `name` prop can be found in fontawesome.com/icons
