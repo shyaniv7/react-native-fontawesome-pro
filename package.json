@@ -41,7 +41,8 @@
     "react-native-svg": ">=5.3.0",
     "@fortawesome/fontawesome-pro-light": "*",
     "@fortawesome/fontawesome-pro-regular": "*",
-    "@fortawesome/fontawesome-pro-solid": "*"
+    "@fortawesome/fontawesome-pro-solid": "*",
+    "@fortawesome/fontawesome-free-brands": "*"
   },
   "jest": {
     "preset": "react-native"
