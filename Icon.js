@@ -20,7 +20,7 @@ const Icon = ( { name, size, color, type, containerStyle, iconStyle, onPress } )
   const path = iconData[4];
   const viewBox = [ 0, 0, iconData[0], iconData[1] ].join( " " );
 
-  const iconContent (
+  const iconContent = (
     <View style={containerStyle}>
       <Svg
         height={size}
