@@ -3,11 +3,11 @@ Easily use your FontAwesome Pro icons in React-Native
 
 # Requirements
 
-* Create a `.npmrc` file in the root of your project and the line below.
+* Execute the following in your command-line environment
 Replace `TOKEN` with your FontAwesome Pro token
 
 ```
-@fortawesome:registry=https://npm.fontawesome.com/<TOKEN>
+npm config set @fortawesome:registry https://npm.fontawesome.com/<TOKEN>
 ```
 This will allow you to download the pro solid, regular and light font packages from the fontawesome pro repo.
 
