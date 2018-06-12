@@ -20,24 +20,30 @@ const Icon = ( { name, size, color, type, containerStyle, iconStyle, onPress } )
   const path = iconData[4];
   const viewBox = [ 0, 0, iconData[0], iconData[1] ].join( " " );
 
-  const iconContent = (
-    <View style={containerStyle}>
-      <Svg
-        height={size}
-        version="1.1"
-        viewBox={viewBox}
-        width={size}
-        x="0"
-        y="0"
-        style={iconStyle}
-      >
-        <Path
-          d={path}
-          fill={color}
-        />
-      </Svg>
-    </View>
+  let iconContent = (
+    <Svg
+      height={size}
+      version="1.1"
+      viewBox={viewBox}
+      width={size}
+      x="0"
+      y="0"
+      style={iconStyle}
+    >
+      <Path
+        d={path}
+        fill={color}
+      />
+    </Svg>
   );
+
+  if ( containerStyle ) {
+    iconContent = (
+      <View style={containerStyle}>
+        {iconContent}
+      </View>
+    );
+  }
 
   if ( onPress ) {
     return (
@@ -71,8 +77,8 @@ Icon.defaultProps = {
   size: 20,
   color: "black",
   type: "regular",
-  containerStyle: {},
-  iconStyle: {},
+  containerStyle: undefined,
+  iconStyle: undefined,
   onPress: null
 };
 
