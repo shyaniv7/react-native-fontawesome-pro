@@ -94,7 +94,6 @@ If a valid name is not provided `question-circle` will show up instead.
 | size      | number      |   20                        |
 | type | prefixType as a string see definition above      |    "regular" |
 | iconStyle | style object      |    {} |
-| containerStyle | style object      |    {} |
 | onPress | function      |    null |
 
 
