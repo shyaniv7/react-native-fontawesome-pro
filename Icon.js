@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { View, TouchableOpacity } from "react-native"
 import { Svg, Path } from "react-native-svg";
-import fontawesome from "@fortawesome/fontawesome";
+import { findIconDefinition } from "@fortawesome/fontawesome-svg-core";
 import { prefixTypes } from "./config";
 
 const DEFAULT_ICON = "question-circle";
@@ -10,10 +10,10 @@ const DEFAULT_ICON = "question-circle";
 const Icon = ( { name, size, color, type, containerStyle, iconStyle, onPress, activeOpacity } ) => {
 
   const prefix = prefixTypes[type];
-  let icon = fontawesome.findIconDefinition( { prefix, iconName: name } );
+  let icon = findIconDefinition( { prefix, iconName: name } );
 
   if ( !icon ) {
-    icon = fontawesome.findIconDefinition( { prefix, iconName: DEFAULT_ICON } );
+    icon = findIconDefinition( { prefix, iconName: DEFAULT_ICON } );
   }
 
   const iconData = icon.icon;

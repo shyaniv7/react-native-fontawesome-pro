@@ -1,7 +1,10 @@
 # react-native-fontawesome-pro
 Easily use your FontAwesome Pro icons in React-Native
 
-# Install Prerequisites
+# V2 is now available and using FontAwesome Pro 5.1
+* V1 is still available as well pleae view the old readme ( FontAwesome Pro 5 )
+
+# Requirements both v1 and v2
 
 1. Create a `.npmrc` file in the root of your project and the line below. Replace `YOUR-TOKEN-HERE` with your FontAwesome Pro token which you can find in your Font Awesome account <https://fontawesome.com/account/services>. More info: [Font Awesome docs: Using a Package Manager](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
 
@@ -12,11 +15,13 @@ Easily use your FontAwesome Pro icons in React-Native
 
 2. Install the FontAwesome Pro packages ( you will not be able to install them without the previous step )
 
-        npm install --save @fortawesome/fontawesome-free-brands @fortawesome/fontawesome-pro-light @fortawesome/fontawesome-pro-regular @fortawesome/fontawesome-pro-solid
+* These are new requirements for v2 
+```
+npm install --save @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/free-brands-svg-icons
 
     or
 
-        yarn add @fortawesome/fontawesome-free-brands @fortawesome/fontawesome-pro-light @fortawesome/fontawesome-pro-regular @fortawesome/fontawesome-pro-solid
+yarn add @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/free-brands-svg-icons
 
 3. Install `react-native-svg`
 
