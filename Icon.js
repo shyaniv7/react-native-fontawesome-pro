@@ -21,27 +21,29 @@ const Icon = ( { name, size, color, type, containerStyle, iconStyle, onPress } )
   const viewBox = [ 0, 0, iconData[0], iconData[1] ].join( " " );
 
   const iconContent = (
-    <View style={containerStyle}>
-      <Svg
-        height={size}
-        version="1.1"
-        viewBox={viewBox}
-        width={size}
-        x="0"
-        y="0"
-        style={iconStyle}
-      >
-        <Path
-          d={path}
-          fill={color}
-        />
-      </Svg>
-    </View>
+    <Svg
+      height={size}
+      version="1.1"
+      viewBox={viewBox}
+      width={size}
+      x="0"
+      y="0"
+      style={iconStyle}
+    >
+      <Path
+        d={path}
+        fill={color}
+      />
+    </Svg>
   );
 
-  if ( onPress ) {
+  if ( onPress || containerStyle ) {
     return (
-      <TouchableOpacity onPress={onPress}>
+      <TouchableOpacity
+        onPress={onPress}
+        disabled={!onPress}
+        style={containerStyle}
+      >
         {iconContent}
       </TouchableOpacity>
     );
@@ -70,10 +72,7 @@ Icon.defaultProps = {
   name: "",
   size: 20,
   color: "black",
-  type: "regular",
-  containerStyle: {},
-  iconStyle: {},
-  onPress: null
+  type: "regular"
 };
 
 export default Icon;
