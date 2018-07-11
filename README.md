@@ -83,6 +83,7 @@ Values for the Icon `name` prop can be found on [fontawesome.com/icons](https://
 | `iconStyle` | style object | undefined |
 | `containerStyle` | style object | undefined |
 | `onPress` | function | undefined |
+| `activeOpacity` | number (beween 0 and 1) | 0.2 ([same as default](https://facebook.github.io/react-native/docs/touchableopacity.html#activeopacity)) |
 
 ###  PR's are welcome `¯\_(ツ)_/¯`
 

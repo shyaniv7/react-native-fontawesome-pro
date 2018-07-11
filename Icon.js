@@ -7,7 +7,7 @@ import { prefixTypes } from "./config";
 
 const DEFAULT_ICON = "question-circle";
 
-const Icon = ( { name, size, color, type, containerStyle, iconStyle, onPress } ) => {
+const Icon = ( { name, size, color, type, containerStyle, iconStyle, onPress, activeOpacity } ) => {
 
   const prefix = prefixTypes[type];
   let icon = fontawesome.findIconDefinition( { prefix, iconName: name } );
@@ -43,6 +43,7 @@ const Icon = ( { name, size, color, type, containerStyle, iconStyle, onPress } )
         onPress={onPress}
         disabled={!onPress}
         style={containerStyle}
+        activeOpacity={activeOpacity}
       >
         {iconContent}
       </TouchableOpacity>
@@ -65,14 +66,16 @@ Icon.propTypes = {
   containerStyle: PropTypes.oneOfType( [
     PropTypes.object,
     PropTypes.number
-  ] )
+  ] ),
+  activeOpacity: PropTypes.number
 };
 
 Icon.defaultProps = {
   name: "",
   size: 20,
   color: "black",
-  type: "regular"
+  type: "regular",
+  activeOpacity: 0.2
 };
 
 export default Icon;
