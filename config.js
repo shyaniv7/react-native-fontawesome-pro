@@ -1,16 +1,16 @@
-import fontawesome from "@fortawesome/fontawesome";
+import { config, library } from "@fortawesome/fontawesome-svg-core";
+import { fal } from "@fortawesome/pro-light-svg-icons";
+import { far } from "@fortawesome/pro-regular-svg-icons";
+import { fas } from "@fortawesome/pro-solid-svg-icons";
+import { fab } from '@fortawesome/fontawesome-free-brands';
 
-import brands from '@fortawesome/fontawesome-free-brands';
-import proLight from "@fortawesome/fontawesome-pro-light";
-import proRegular from "@fortawesome/fontawesome-pro-regular";
-import proSolid from "@fortawesome/fontawesome-pro-solid";
 
 export const configureFontAwesomePro = ( prefixType = "regular" ) => {
   fontawesome.config = {
     familyPrefix: prefixTypes[prefixType]
   };
 
-  fontawesome.library.add( brands, proLight, proRegular, proSolid );
+  fontawesome.library.add( fab, fal, far, fas );
 }
 
 
