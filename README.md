@@ -1,10 +1,23 @@
 # react-native-fontawesome-pro
-Easily use your FontAwesome Pro icons in React-Native
 
-# V2 is now available and using FontAwesome Pro 5.1
-* V1 is still available as well pleae view the old readme ( FontAwesome Pro 5 )
+Easily use your FontAwesome Pro 5.1 icons in React-Native.
 
-# Requirements both v1 and v2
+v2 of this module takes advantage of [enhancements in FontAwesome 5.1’s JS Package Cleanup](https://fontawesome.com/changelog/latest#enhancements) and provides access to 409 new icons.
+
+**Want to install v1?** [View the old readme for FontAwesome Pro 5](https://github.com/shyaniv7/react-native-fontawesome-pro/tree/fcbabb90f197c552aecb9bb5d9a9acb3170ecb080)
+
+# Upgrading from v1?
+
+If upgrading from a v1 installation uninstall the previous prerequisite FontAwesome packages:
+
+    npm uninstall --save @fortawesome/fontawesome-free-brands @fortawesome/fontawesome-pro-light @fortawesome/fontawesome-pro-regular @fortawesome/fontawesome-pro-solid
+
+or
+
+    yarn remove @fortawesome/fontawesome-free-brands @fortawesome/fontawesome-pro-light @fortawesome/fontawesome-pro-regular @fortawesome/fontawesome-pro-solid
+
+
+# Installation Prerequisites
 
 1. Create a `.npmrc` file in the root of your project and the line below. Replace `YOUR-TOKEN-HERE` with your FontAwesome Pro token which you can find in your Font Awesome account <https://fontawesome.com/account/services>. More info: [Font Awesome docs: Using a Package Manager](https://fontawesome.com/how-to-use/on-the-web/setup/using-package-managers)
 
@@ -15,13 +28,12 @@ Easily use your FontAwesome Pro icons in React-Native
 
 2. Install the FontAwesome Pro packages ( you will not be able to install them without the previous step )
 
-* These are new requirements for v2 
-```
-npm install --save @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/free-brands-svg-icons
+
+        npm install --save @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/free-brands-svg-icons
 
     or
 
-yarn add @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/free-brands-svg-icons
+        yarn add @fortawesome/pro-light-svg-icons @fortawesome/pro-regular-svg-icons @fortawesome/pro-solid-svg-icons @fortawesome/free-brands-svg-icons
 
 3. Install `react-native-svg`
 
