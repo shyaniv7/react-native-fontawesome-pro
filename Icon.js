@@ -61,11 +61,11 @@ Icon.propTypes = {
   type: PropTypes.oneOf( Object.keys( prefixTypes ) ),
   iconStyle: PropTypes.oneOfType( [
     PropTypes.object,
-    PropTypes.number
+    PropTypes.array
   ] ),
   containerStyle: PropTypes.oneOfType( [
     PropTypes.object,
-    PropTypes.number
+    PropTypes.array
   ] ),
   activeOpacity: PropTypes.number
 };
