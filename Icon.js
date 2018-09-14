@@ -75,8 +75,7 @@ Icon.defaultProps = {
   size: 20,
   color: "black",
   type: "regular",
-  activeOpacity: 0.2,
-  type: "regular"
+  activeOpacity: 0.2
 };
 
 export default Icon;
