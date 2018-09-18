@@ -1,6 +1,8 @@
 {
   "name": "react-native-fontawesome-pro",
   "version": "2.0.1",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
