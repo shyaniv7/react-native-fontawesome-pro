@@ -8,8 +8,12 @@ import { prefixTypes } from "./config";
 const DEFAULT_ICON = "question-circle";
 
 const Icon = ( { name, size, color, type, containerStyle, iconStyle, onPress, activeOpacity } ) => {
-
-  const prefix = prefixTypes[type];
+  let prefix;
+  if (type && prefixTypes[type]) {
+    prefix = prefixTypes[type];
+  } else {
+    prefix = FontAwesomeConfig.familyPrefix || prefixTypes["regular"];
+  }
   let icon = findIconDefinition( { prefix, iconName: name } );
 
   if ( !icon ) {
@@ -74,9 +78,7 @@ Icon.defaultProps = {
   name: "",
   size: 20,
   color: "black",
-  type: "regular",
   activeOpacity: 0.2,
-  type: "regular"
 };
 
 export default Icon;

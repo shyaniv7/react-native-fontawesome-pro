@@ -1,4 +1,4 @@
-import { config, library } from "@fortawesome/fontawesome-svg-core";
+import { library } from "@fortawesome/fontawesome-svg-core";
 import { fal } from "@fortawesome/pro-light-svg-icons";
 import { far } from "@fortawesome/pro-regular-svg-icons";
 import { fas } from "@fortawesome/pro-solid-svg-icons";
@@ -12,9 +12,9 @@ export const prefixTypes = {
 };
 
 export const configureFontAwesomePro = ( prefixType = "regular" ) => {
-  FontAwesomeConfig = {
-    familyPrefix: prefixTypes[prefixType]
-  };
+  if (prefixTypes[prefixType]) {
+    FontAwesomeConfig.familyPrefix = prefixTypes[prefixType];
+  }
 
   library.add( fab, fal, far, fas );
 }
