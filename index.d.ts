@@ -1,7 +1,7 @@
-import { ViewStyle, ViewProperties } from "react-native";
+import { ViewStyle, ViewProps } from "react-native";
 import { SvgProps } from "react-native-svg";
 
-export interface IconProps extends ViewProperties {
+export interface IconProps extends ViewProps {
   name?: string;
   size?: number;
   color?: string;

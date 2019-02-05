@@ -1,6 +1,6 @@
 {
   "name": "react-native-fontawesome-pro",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "main": "./index.js",
   "types": "./index.d.ts",
   "scripts": {
@@ -37,7 +37,8 @@
     "jest": "22.4.2",
     "prop-types": "^15.5.7",
     "react-native-svg": "^7.0.2",
-    "react-test-renderer": "^16.2.0"
+    "react-test-renderer": "^16.2.0",
+    "merge": ">=1.2.1"
   },
   "peerDependencies": {
     "react": ">=15.5.0",
