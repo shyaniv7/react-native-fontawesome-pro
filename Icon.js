@@ -17,7 +17,6 @@ const Icon = ( { name, size, color, type, containerStyle, iconStyle, onPress, ac
   }
 
   const iconData = icon.icon;
-  const path = iconData[4];
   const viewBox = [ 0, 0, iconData[0], iconData[1] ].join( " " );
 
   const iconContent = (
@@ -30,10 +29,16 @@ const Icon = ( { name, size, color, type, containerStyle, iconStyle, onPress, ac
       y="0"
       style={iconStyle}
     >
-      <Path
-        d={path}
-        fill={color}
-      />
+       {Array.isArray(iconData[4]) ? (
+        <Fragment>
+          <Path d={iconData[4][0]} fill={color} opacity={0.4} />
+          <Path d={iconData[4][1]} fill={color} />
+        </Fragment>
+      ) : (
+        <Fragment>
+          <Path d={iconData[4]} fill={color} />
+        </Fragment>
+      )}
     </Svg>
   );
 
